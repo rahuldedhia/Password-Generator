@@ -12,13 +12,13 @@ function writePassword() {
 //code written by me
 function generatePassword() {
   alert("Select your criteria for password generation");
-  var PassLen = prompt("Enter the length of the password - Enter a number between 8 and 128");
+  var PassLen = prompt("Enter the required length of the password - A whole number between 8 and 128");
 
-  while (PassLen < 8 || PassLen > 128) {
+  while (PassLen < 8 || PassLen > 128 || isNaN (PassLen)) {
     alert("Incorrect password length. Please enter a number between 8 & 128");
-    PassLen = prompt("Enter the length of the password - Enter a number between 8 and 128");
+    PassLen = prompt("Enter the required length of the password - A whole number between 8 and 128");
   }
-    //console.log(PassLen);
+  //console.log(PassLen);
   
   var LwrCase = confirm("Do you want to inclue lowercase characters? - Select 'OK' for Yes and 'Cancel' for No");
   var UprCase = confirm("Do you want to inclue uppercase characters? - Select 'OK' for Yes and 'Cancel' for No");
