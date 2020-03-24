@@ -18,7 +18,7 @@ function generatePassword() {
     alert("Incorrect password length. Please enter a number between 8 & 128");
     PassLen = prompt("Enter the required length of the password - Enter a whole number between 8 and 128");
   }
-    //console.log(PassLen);
+  PassLen = Math.floor(PassLen);
   
   var LwrCase = confirm("Do you want to inclue lowercase characters? - Select 'OK' for Yes and 'Cancel' for No");
   var UprCase = confirm("Do you want to inclue uppercase characters? - Select 'OK' for Yes and 'Cancel' for No");
@@ -40,7 +40,7 @@ function generatePassword() {
   //console.log(SplChar);
 
   alert("Your slection criteria is as follows:" + "\n" + "\n" +
-  "Password length is " + Math.floor(PassLen) + "\n" +
+  "Password length is " + PassLen + "\n" +
   "Include lowercase characters = " + LwrCase + "\n" +
   "Include uppercase characters = " + UprCase + "\n" +
   "Include Numeric characters = " + Numeric + "\n" +
@@ -69,7 +69,7 @@ function generatePassword() {
  //console.log(Math.floor(Math.random() * AllChars.length));
  var GenPass = "";
 
- for (i=0; i< Math.floor(PassLen); i++)
+ for (i=0; i< PassLen; i++)
  {
    GenPass += AllChars[Math.floor(Math.random() * AllChars.length)];
    //console.log(GenPass);
