@@ -14,11 +14,9 @@ function generatePassword() {
   alert("Select your criteria for password generation");
   var PassLen = prompt("Enter the length of the password - Enter a number between 8 and 128");
 
-  while  (PassLen < 8 || PassLen > 128) 
- {
+  while (PassLen < 8 || PassLen > 128) {
     alert("Incorrect password length. Please enter a number between 8 & 128");
     PassLen = prompt("Enter the length of the password - Enter a number between 8 and 128");
-    //console.log(PassLen);
   }
     //console.log(PassLen);
   
